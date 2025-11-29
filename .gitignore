@@ -1,0 +1,20 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VSCode / IDE stuff
+.vscode/
+.idea/
+
+#backend/data/
+
+frontend/node_modules/
+node_modules/
+
+frontend/.next/
+frontend/out/
