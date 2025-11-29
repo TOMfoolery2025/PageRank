@@ -94,3 +94,52 @@ pnpm install
 pnpm dev
 ```
 Then open: http://localhost:3000
+
+
+# Configuration for Your Environment
+## Configure Frontend API Endpoint
+
+### Open 
+
+```
+frontend/lib/api.ts
+
+```
+### Find:
+
+```
+const API_BASE = "https://burt-infracostal-kristy.ngrok-free.dev";
+
+```
+### Replace:
+
+```
+const API_BASE = "http://localhost:8000";
+// Or: const API_BASE = "https://YOUR_PUBLIC_TUNNEL_URL";
+
+```
+
+## Configure Backend Cluster Credentials
+open 
+
+```
+api/config.py
+
+```
+### Insert your own cluster credentials:
+
+```
+CLUSTER_USER = "yourusername"
+CLUSTER_HOST = "yourhost"
+
+REMOTE_WORKDIR = "your source  /jobs"
+REMOTE_BIN = "your source/Hackathon-PageRank/backend/cuda/pagerank_gpu"
+
+```
+
+## SSH Requirements
+```
+ssh-add ~/.ssh/id_rsa
+ssh USERNAME@CLUSTER_HOST
+
+```
